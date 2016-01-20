@@ -32,7 +32,12 @@
         android:layout_below="@id/header"
         android:gravity="center" >
 
-
+        <LinearLayout
+            android:id="@+id/fragment_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
         
     </RelativeLayout>
 
