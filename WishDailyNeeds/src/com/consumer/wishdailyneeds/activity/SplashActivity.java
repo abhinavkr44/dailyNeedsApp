@@ -17,6 +17,7 @@ import com.app.consumer.wishdailyneeds.R;
 import com.consumer.wishdailyneeds.database.DatabaseHelper;
 import com.consumer.wishdailyneeds.model.Product;
 import com.consumer.wishdailyneeds.utils.Const;
+import com.consumer.wishdailyneeds.utils.Utils;
 
 public class SplashActivity extends Activity {
 
@@ -41,18 +42,23 @@ public class SplashActivity extends Activity {
 
 			@Override
 			public void run() {
-				// if (Utils.isDataConnected(getApplicationContext())) {
-				Intent intent = new Intent(SplashActivity.this,
-						MainActivity.class);
-				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				intent.putExtra(Const.EXTRAS_PRODUCT_LIST, (Serializable)productList);
-				startActivity(intent);
+				if (Utils.isDataConnected(getApplicationContext())) {
+					Intent intent = new Intent(SplashActivity.this,
+							CategoryActivity.class);
+					intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					startActivity(intent);
+
+				} else {
+					Intent intent = new Intent(SplashActivity.this,
+							MainActivity.class);
+					intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					intent.putExtra(Const.EXTRAS_PRODUCT_LIST,
+							(Serializable) productList);
+					startActivity(intent);
+					// Dialogs.getDialogs().dialogOfflineOrder(mContext);
+				}
 				mProgressBar.setVisibility(View.GONE);
 				finish();
-				// } else {
-				// Dialogs.getDialogs().dialogOfflineOrder(mContext);
-				// }
-
 			}
 		}, SPLASH_TIME_OUT);
 
@@ -61,7 +67,7 @@ public class SplashActivity extends Activity {
 	private void init() {
 		db = new DatabaseHelper(getApplicationContext());
 		productList = new ArrayList<Product>();
-		
+
 		Product milk = new Product(2, "Milk");
 		Product water = new Product(1, "Water");
 		long waterRes = db.createProduct(water);
@@ -69,7 +75,7 @@ public class SplashActivity extends Activity {
 
 		Log.d(TAG, "Water product inserted response = " + waterRes
 				+ " and Milk product inserted response = " + milkRes);
-		
+
 		productList = db.getAllProduct();
 	}
 }

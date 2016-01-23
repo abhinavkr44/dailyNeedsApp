@@ -26,11 +26,14 @@ public class MainActivity extends Activity {
 				Const.EXTRAS_PRODUCT_LIST);
 		TextView tv = (TextView) findViewById(R.id.text_temp);
 
-		for (int i = 0; i < products.size(); i++) {
-			Log.v("name", products.get(i).getProductName());
+		if (products != null) {
+			for (int i = 0; i < products.size(); i++) {
+				Log.v("name", products.get(i).getProductName());
+			}
+
+			tv.setText(products.get(0).getProductName() + " and"
+					+ products.get(1).getProductName());
 		}
-		tv.setText(products.get(0).getProductName() + " and"
-				+ products.get(1).getProductName());
 
 	}
 }
