@@ -3,7 +3,9 @@
 
     <string name="app_name">Wish Daily Needs</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_order_history">Order History</string>
+    <string name="action_my_profile">My Profile</string>
+    <string name="action_contact">Contact Us</string>
     <string name="dialog_offiline_ok">Order Offline</string>
     <string name="dialog_offiline_cancel">Exit</string>
     <string name="dialog_offline_title">No Internet Connection</string>

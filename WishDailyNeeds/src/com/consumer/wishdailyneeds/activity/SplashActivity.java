@@ -36,7 +36,7 @@ public class SplashActivity extends Activity {
 		mContext = this;
 		mProgressBar = (ProgressBar) findViewById(R.id.progressbar_splash);
 
-		init();
+		// init();
 
 		new Handler().postDelayed(new Runnable() {
 
@@ -47,16 +47,17 @@ public class SplashActivity extends Activity {
 							CategoryActivity.class);
 					intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 					startActivity(intent);
-
-				} else {
-					Intent intent = new Intent(SplashActivity.this,
-							MainActivity.class);
-					intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-					intent.putExtra(Const.EXTRAS_PRODUCT_LIST,
-							(Serializable) productList);
-					startActivity(intent);
-					// Dialogs.getDialogs().dialogOfflineOrder(mContext);
 				}
+
+				// } else {
+				// Intent intent = new Intent(SplashActivity.this,
+				// MainActivity.class);
+				// intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				// intent.putExtra(Const.EXTRAS_PRODUCT_LIST,
+				// (Serializable) productList);
+				// startActivity(intent);
+				// // Dialogs.getDialogs().dialogOfflineOrder(mContext);
+				// }
 				mProgressBar.setVisibility(View.GONE);
 				finish();
 			}

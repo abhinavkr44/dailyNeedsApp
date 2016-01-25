@@ -13,8 +13,8 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label=""
+        android:theme="@style/AppTheme">
 
         <!-- Activities -->
         <activity
@@ -32,6 +32,10 @@
             android:name="com.consumer.wishdailyneeds.activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.consumer.wishdailyneeds.activity.CategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyHoloLightTheme"/>
 
         <!-- Receivers -->
 

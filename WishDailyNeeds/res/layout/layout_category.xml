@@ -6,6 +6,8 @@
 
     <!-- Header aligned to top -->
 
+
+    <!--
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -22,15 +24,17 @@
             android:layout_margin="@dimen/dimens_5"
             android:background="@drawable/cart_button" />
     </RelativeLayout>
+    -->
+
 
     <!-- Content below header -->
 
     <RelativeLayout
         android:id="@+id/content"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/header"
-        android:gravity="center" >
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/wall_category"
+        android:gravity="top" >
 
         <!--
         <LinearLayout
@@ -41,17 +45,37 @@
         </LinearLayout>
         -->
 
-        <TextView
-            android:id="@+id/text_temp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ProgressBar
-            android:id="@+id/progressbar_category"
-            style="@android:style/Widget.ProgressBar.Inverse"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true" />
     </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar_category"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/text_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/content"
+        android:drawableTop="@drawable/water_logo"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/text_milk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/progressbar_category"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/text_water"
+        android:drawableTop="@drawable/milk_logo"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
