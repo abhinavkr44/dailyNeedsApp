@@ -1,6 +1,5 @@
 package com.consumer.wishdailyneeds.activity;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,6 @@ import android.widget.ProgressBar;
 import com.app.consumer.wishdailyneeds.R;
 import com.consumer.wishdailyneeds.database.DatabaseHelper;
 import com.consumer.wishdailyneeds.model.Product;
-import com.consumer.wishdailyneeds.utils.Const;
 import com.consumer.wishdailyneeds.utils.Utils;
 
 public class SplashActivity extends Activity {

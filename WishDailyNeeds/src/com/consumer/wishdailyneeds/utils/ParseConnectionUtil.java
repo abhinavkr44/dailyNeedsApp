@@ -1,5 +1,4 @@
 package com.consumer.wishdailyneeds.utils;
-
 import java.io.IOException;
 
 import org.apache.http.HttpResponse;

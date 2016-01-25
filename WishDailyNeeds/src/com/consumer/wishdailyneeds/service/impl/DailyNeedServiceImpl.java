@@ -10,8 +10,8 @@ package com.consumer.wishdailyneeds.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.database.sqlite.SQLiteDatabase;
 
+import android.database.sqlite.SQLiteDatabase;
 import com.consumer.wishdailyneeds.dao.DailyNeedDAO;
 import com.consumer.wishdailyneeds.dao.impl.DailyNeedDAOImpl;
 import com.consumer.wishdailyneeds.model.BrandDTO;
